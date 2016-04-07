@@ -21,3 +21,21 @@ var bubbleSort = function(array){
 var a = [5,3,2,4,1];
 
 console.log(bubbleSort(a));
+
+var substrings = function(string) {
+  var result = [];
+
+  for(var i = 0; i < string.length - 1; i++) {
+    for(var j = i + 1; j < string.length; j++) {
+      var sub = string.slice(i, j);
+      if (result.indexOf(sub) === -1) {
+        result.push(sub);
+      }
+    }
+  }
+
+  return result;
+};
+
+var s = "programming";
+console.log(substrings(s));
